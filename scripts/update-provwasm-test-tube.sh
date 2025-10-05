@@ -5,7 +5,7 @@ set -euxo pipefail
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 PROVENANCE_REV=${1:-main}
 
-LATEST_PROVENANCE_VERSION="v1.18.0"
+LATEST_PROVENANCE_VERSION="main"
 
 # if "$PROVENANCE_REV" is /v\d+/ then extract it as var
 if [[ "$PROVENANCE_REV" =~ ^v[0-9]+ ]]; then

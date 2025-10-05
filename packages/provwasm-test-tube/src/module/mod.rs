@@ -9,7 +9,6 @@ pub mod gov;
 pub mod hold;
 pub mod marker;
 pub mod metadata;
-pub mod msgfees;
 pub mod name;
 pub mod oracle;
 pub mod trigger;
