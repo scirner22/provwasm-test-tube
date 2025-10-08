@@ -1,6 +1,8 @@
 module github.com/provenance-io/test-tube/provwasm-test-tube
 
-go 1.23
+go 1.23.1
+
+toolchain go1.23.4
 
 require (
 	cosmossdk.io/log v1.6.1
@@ -247,7 +249,7 @@ require (
 	github.com/prometheus/client_model v0.6.1 // indirect
 	github.com/prometheus/common v0.62.0 // indirect
 	github.com/prometheus/procfs v0.15.1 // indirect
-	github.com/provlabs/vault v1.0.3 // indirect
+	github.com/provlabs/vault v1.0.4 // indirect
 	github.com/quasilyte/go-ruleguard v0.4.3-0.20240823090925-0fe6f58b47b1 // indirect
 	github.com/quasilyte/go-ruleguard/dsl v0.3.22 // indirect
 	github.com/quasilyte/gogrep v0.5.0 // indirect
@@ -376,7 +378,7 @@ replace (
 	github.com/gin-gonic/gin => github.com/gin-gonic/gin v1.9.1
 
 	// replace provenance-io with provlabs fork
-	github.com/provenance-io/provenance => github.com/provenance-io/provenance v1.3.2-0.20251003232936-6f7a84bd27b1
+	github.com/provenance-io/provenance => github.com/provenance-io/provenance v1.3.2-0.20251007234709-43bc7778a1a0
 
 	// replace broken goleveldb
 	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
