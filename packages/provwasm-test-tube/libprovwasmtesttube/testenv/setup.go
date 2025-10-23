@@ -1,8 +1,11 @@
 package testenv
 
 import (
-	sdkmath "cosmossdk.io/math"
 	"encoding/json"
+	"strings"
+	"time"
+
+	sdkmath "cosmossdk.io/math"
 	wasmtypes "github.com/CosmWasm/wasmd/x/wasm/types"
 	cmttypes "github.com/cometbft/cometbft/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
@@ -12,8 +15,6 @@ import (
 	"github.com/provenance-io/provenance/cmd/provenanced/config"
 	nametypes "github.com/provenance-io/provenance/x/name/types"
 	"github.com/spf13/pflag"
-	"strings"
-	"time"
 
 	// helpers
 
@@ -28,6 +29,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
+
 	// wasmd
 
 	// provenance
@@ -99,7 +101,7 @@ func SetupProvenanceApp(nodeHome string) *app.App {
 	config.SetPioConfigFromFlags(provwasmFlags)
 
 	baseAppOpts := []func(*baseapp.BaseApp){
-		baseapp.SetChainID("testnet"),
+		baseapp.SetChainID("testchain"),
 	}
 
 	appOpts := simtestutil.NewAppOptionsWithFlagHome(nodeHome)
