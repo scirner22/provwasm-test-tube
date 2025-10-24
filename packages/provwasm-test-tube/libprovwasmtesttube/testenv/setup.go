@@ -149,7 +149,7 @@ func InitChain(appInstance *app.App) (sdk.Context, secp256k1.PrivKey) {
 
 	_, err = appInstance.InitChain(
 		&abci.RequestInitChain{
-			ChainId:         "testnet",
+			ChainId:         "testchain",
 			Validators:      []abci.ValidatorUpdate{},
 			ConsensusParams: consensusParams,
 			AppStateBytes:   stateBytes,
@@ -157,7 +157,7 @@ func InitChain(appInstance *app.App) (sdk.Context, secp256k1.PrivKey) {
 	)
 	requireNoErr(err)
 
-	ctx := appInstance.NewUncachedContext(false, cmtproto.Header{Height: 0, ChainID: "testnet", Time: time.Now().UTC()})
+	ctx := appInstance.NewUncachedContext(false, cmtproto.Header{Height: 0, ChainID: "testchain", Time: time.Now().UTC()})
 
 	return ctx, valPriv
 }
