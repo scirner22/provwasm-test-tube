@@ -256,14 +256,11 @@ impl BaseApp {
                 gas_adjustment,
             } => {
                 let gas_info = self.simulate_tx(msgs, signer)?;
-                // let gas_limit = ((gas_info.gas_used as f64) * (gas_adjustment)).ceil() as u64;
-
-                // let amount = cosmrs::Coin {
-                //     denom: self.fee_denom.parse().unwrap(),
-                //     amount: (((gas_limit as f64) * (gas_price.amount.u128() as f64)).ceil() as u64)
-                //         .into(),
-                // };
-                Ok(Fee::from_amount_and_gas(amount, gas_info.amount))
+                let amount = cosmrs::Coin {
+                    denom: self.fee_denom.parse().unwrap(),
+                    amount: gas_info.gas_used as u128,
+                };
+                Ok(Fee::from_amount_and_gas(amount, gas_info.gas_used))
             }
             FeeSetting::Custom { .. } => {
                 panic!("estimate fee is a private function and should never be called when fee_setting is Custom");
