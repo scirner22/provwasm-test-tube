@@ -8,7 +8,7 @@ require (
 	cosmossdk.io/log v1.6.1
 	cosmossdk.io/math v1.4.0
 	github.com/CosmWasm/wasmd v0.52.0
-	github.com/cometbft/cometbft v0.38.18
+	github.com/cometbft/cometbft v0.38.19
 	github.com/cosmos/cosmos-db v1.1.3
 	github.com/cosmos/cosmos-sdk v0.50.10
 	github.com/cosmos/gogoproto v1.7.0
@@ -249,7 +249,7 @@ require (
 	github.com/prometheus/client_model v0.6.1 // indirect
 	github.com/prometheus/common v0.62.0 // indirect
 	github.com/prometheus/procfs v0.15.1 // indirect
-	github.com/provlabs/vault v1.0.6 // indirect
+	github.com/provlabs/vault v1.0.9 // indirect
 	github.com/quasilyte/go-ruleguard v0.4.3-0.20240823090925-0fe6f58b47b1 // indirect
 	github.com/quasilyte/go-ruleguard/dsl v0.3.22 // indirect
 	github.com/quasilyte/gogrep v0.5.0 // indirect
@@ -378,7 +378,7 @@ replace (
 	github.com/gin-gonic/gin => github.com/gin-gonic/gin v1.9.1
 
 	// replace provenance-io with provlabs fork
-	github.com/provenance-io/provenance => github.com/provenance-io/provenance v1.3.2-0.20251009195105-06358a36fde6
+	github.com/provenance-io/provenance => github.com/provenance-io/provenance v1.3.2-0.20251023132414-52d84e9753da
 
 	// replace broken goleveldb
 	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7

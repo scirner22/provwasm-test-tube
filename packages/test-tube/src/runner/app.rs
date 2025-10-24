@@ -21,7 +21,7 @@ use crate::runner::result::RawResult;
 use crate::runner::result::{RunnerExecuteResult, RunnerResult};
 use crate::runner::Runner;
 
-pub const PROVENANCE_MIN_GAS_PRICE: u128 = 2_500;
+pub const PROVENANCE_MIN_GAS_PRICE: u128 = 1;
 
 #[derive(Debug, PartialEq)]
 pub struct BaseApp {
