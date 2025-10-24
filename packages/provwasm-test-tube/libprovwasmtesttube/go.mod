@@ -1,8 +1,6 @@
 module github.com/provenance-io/test-tube/provwasm-test-tube
 
-go 1.23.1
-
-toolchain go1.23.4
+go 1.23
 
 require (
 	cosmossdk.io/log v1.6.1
