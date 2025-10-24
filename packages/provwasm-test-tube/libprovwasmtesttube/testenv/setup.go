@@ -101,7 +101,7 @@ func SetupProvenanceApp(nodeHome string) *app.App {
 	config.SetPioConfigFromFlags(provwasmFlags)
 
 	baseAppOpts := []func(*baseapp.BaseApp){
-		baseapp.SetChainID("testchain"),
+		baseapp.SetChainID("simapp-unit-testing"),
 	}
 
 	appOpts := simtestutil.NewAppOptionsWithFlagHome(nodeHome)
@@ -149,7 +149,7 @@ func InitChain(appInstance *app.App) (sdk.Context, secp256k1.PrivKey) {
 
 	_, err = appInstance.InitChain(
 		&abci.RequestInitChain{
-			ChainId:         "testchain",
+			ChainId:         "simapp-unit-testing",
 			Validators:      []abci.ValidatorUpdate{},
 			ConsensusParams: consensusParams,
 			AppStateBytes:   stateBytes,
@@ -157,7 +157,7 @@ func InitChain(appInstance *app.App) (sdk.Context, secp256k1.PrivKey) {
 	)
 	requireNoErr(err)
 
-	ctx := appInstance.NewUncachedContext(false, cmtproto.Header{Height: 0, ChainID: "testchain", Time: time.Now().UTC()})
+	ctx := appInstance.NewUncachedContext(false, cmtproto.Header{Height: 0, ChainID: "simapp-unit-testing", Time: time.Now().UTC()})
 
 	return ctx, valPriv
 }
