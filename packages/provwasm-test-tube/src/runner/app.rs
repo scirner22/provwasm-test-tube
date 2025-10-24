@@ -7,7 +7,7 @@ use test_tube_prov::BaseApp;
 const FEE_DENOM: &str = "nhash";
 const PROV_ADDRESS_PREFIX: &str = "tp";
 const CHAIN_ID: &str = "testchain";
-const DEFAULT_GAS_ADJUSTMENT: f64 = 2.5;
+const DEFAULT_GAS_ADJUSTMENT: f64 = 1.85;
 
 #[derive(Debug, PartialEq)]
 pub struct ProvwasmTestApp {
