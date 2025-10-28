@@ -227,9 +227,9 @@ impl BaseApp {
         let zero_fee = Fee::from_amount_and_gas(
             cosmrs::Coin {
                 denom: self.fee_denom.parse().unwrap(),
-                amount: PROVENANCE_MIN_GAS_PRICE,
+                amount: 0u128,
             },
-            0u64,
+            1u64,
         );
 
         let tx = self.create_signed_tx(msgs, signer, zero_fee)?;
